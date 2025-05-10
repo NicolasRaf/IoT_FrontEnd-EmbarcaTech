@@ -1,0 +1,174 @@
+body {
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background: #eef2f7;
+  color: #333;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.status-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.status span {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.status.connected {
+  background: #27ae60;
+  color: #fff;
+}
+
+.status.disconnected {
+  background: #c0392b;
+  color: #fff;
+}
+
+.status.warn {
+  background: #f1c40f;
+  color: #333;
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.joystick-box {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px;
+  background: #f9f9f9;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+}
+
+#joystick-indicator {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #ff6b6b;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttons-card .btn-status {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.btn-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-indicator {
+  width: 40px;
+  height: 40px;
+  background: #bbb;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  transition: background 0.3s ease;
+}
+
+.sensor-card .progress-bar {
+  width: 100%;
+  height: 30px;
+  background: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 100px;
+  filter: drop-shadow(0 2px 6px #4a90e2);
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background: #4a90e2;
+  transition: width 0.3s ease;
+}
+
+.compass-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px;
+}
+
+.compass-rose {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #333;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.label {
+  position: absolute;
+  font-weight: bold;
+  color: #333;
+  user-select: none;
+}
+.label.north { top: 4px; left: 50%; transform: translateX(-50%); }
+.label.south { bottom: 4px; left: 50%; transform: translateX(-50%); }
+.label.east  { right: 4px; top: 50%; transform: translateY(-50%); }
+.label.west  { left: 4px; top: 50%; transform: translateY(-50%); }
+.label.northwest { top: 20px; left: 17px; }
+.label.northeast { top: 20px; right: 17px; }
+.label.southwest { bottom: 20px; left: 17px; }
+.label.southeast { bottom: 20px; right: 17px; }
+
+.needle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #e74c3c;
+  transition: all 0.3s ease;
+}
+.needle.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+.needle.line {
+  width: 4px;
+  height: 70px;
+  border-radius: 2px;
+  transform-origin: bottom center;
+}

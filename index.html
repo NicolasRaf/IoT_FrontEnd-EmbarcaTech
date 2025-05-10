@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monitoramento IoT - Visualização</title>
+  <link rel="icon" type="image/png" href="https://img.icons8.com/?size=100&id=2356&format=png&color=000000">
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <h1>Monitoramento IoT - EmbarcaTech</h1>
+
+  <!-- Status de conexão e dados -->
+  <div class="status-container">
+    <div id="connection-status" class="status disconnected"><span>Servidor</span>: Desconectado</div>
+    <div id="data-status" class="status disconnected"><span></span>Sem dados</div>
+  </div>
+
+  <div class="dashboard">
+    <div class="card joystick-card">
+      <h2>🎮 Joystick</h2>
+      <div class="joystick-box">
+        <div id="joystick-indicator"></div>
+      </div>
+      <p>X: <span id="eixo_x">-</span></p>
+      <p>Y: <span id="eixo_y">-</span></p>
+    </div>
+
+    <div class="card buttons-card">
+      <h2>🔘 Botões</h2>
+      <div class="btn-status">
+        <div class="btn-item">
+          <div id="btn1-indicator" class="btn-indicator"></div>
+          <span>Botão A</span>
+        </div>
+        <div class="btn-item">
+          <div id="btn2-indicator" class="btn-indicator"></div>
+          <span>Botão B</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card sensor-card">
+      <h2>📏 Distância (HC-SR04)</h2>
+      <div class="progress-bar">
+        <div id="hc-bar-fill" class="fill"></div>
+      </div>
+      <p><span id="hc_sr04">-</span> cm</p>
+    </div>
+
+    <div class="card compass-card">
+      <h2>🧭 Rosa dos Ventos</h2>
+      <div class="compass-container">
+        <div class="compass-rose">
+          <div class="label north">N</div>
+          <div class="label northeast">NE</div>
+          <div class="label east">L</div>
+          <div class="label southeast">SE</div>
+          <div class="label south">S</div>
+          <div class="label southwest">SO</div>
+          <div class="label west">O</div>
+          <div class="label northwest">NO</div>
+        </div>
+        <div id="compass-needle" class="needle dot"></div>
+      </div>
+      <p>Direção: <span id="direcao">-</span></p>
+    </div>
+  </div>
+
+  <script src="src/script.js"></script>
+</body>
+</html>
