@@ -9,7 +9,7 @@ Este projeto é um **dashboard web** para monitoramento de dados IoT vindos de u
 - 📏 **Leitura do sensor HC-SR04** (barra de progresso)
 - 🧭 **Rosa dos Ventos dinâmica** (agulha que aponta conforme o joystick)
 
- [Acesse o site aqui!](https://iotdashboard.embarcatech.com/) 🚀
+ [Acesse o site aqui!](https://nicolasraf.github.io/IoT_FrontEnd-EmbarcaTech/) 🚀
 
 ## 📁 Estrutura de Arquivos
 
